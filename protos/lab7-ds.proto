@@ -1,0 +1,61 @@
+#VRML_SIM R2025a utf8
+
+PROTO lab7-ds [
+  field SFVec3f    translation  0 0.005 0
+  field SFRotation rotation     0 0 1 0
+  field SFString   name         "ds"
+  field SFInt32    numberOfRays 1         # Is `DistanceSensor.numberOfRays`.
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      DistanceSensor {
+        rotation 0.9936339104711146 0.07966069282237355 -0.07966069282237355 -1.5771853071795858
+        name IS name
+        children [
+          Shape { # sensor
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 0.4
+              metalness 0
+            }
+            geometry Box {
+              size 0.002 0.007 0.004
+            }
+          }
+          Shape { # pins
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.02 0.02 0.02
+              }
+            }
+            geometry IndexedLineSet {
+              coord Coordinate {
+                point [
+                  0 0.003 0 0 0.003 0.004 0 0.001 0 0 0.001 0.004 0 -0.001 0 0 -0.001 0.004 0 -0.003 0 0 -0.003 0.004
+                ]
+              }
+              coordIndex [
+                0, 1, -1, 2, 3, -1, 4, 5, -1, 6, 7
+              ]
+            }
+          }
+        ]
+        lookupTable [
+          0.00 0 0
+          0.10 3000 0
+          0.20 1000 0
+          0.50 100 0
+          0.51 0 0
+        ]
+        type "laser"
+        numberOfRays IS numberOfRays
+        aperture 0.1
+      }
+    ]
+    name IS name
+    model "e-puck distance sensor"
+  }
+}
