@@ -2,9 +2,9 @@
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Copper.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidPipe.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/UNSW-MTRN2500/webots-objects/refs/heads/main/protos/lab7-ds.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/UNSW-MTRN2500/webots-utils/refs/heads/main/protos/lab7/ds.proto"
 
-PROTO lab7-epuck [
+PROTO epuck [
   field SFVec3f            translation                  0 0 0                    # Is `Pose.translation`.
   field SFRotation         rotation                     0 0 1 0                  # Is `Pose.rotation`.
   field SFString           name                         "e-puck"                 # Is `Solid.name`.
@@ -655,49 +655,49 @@ Robot {
         ]
       }
     %< } >%
-    DEF EPUCK_PS0 lab7-ds {
+    DEF EPUCK_PS0 ds {
       translation 0.03 -0.01 0.033
       rotation -0.977797 0.14818 0.148178 -1.593259
       name "ps0"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS1 lab7-ds {
+    DEF EPUCK_PS1 ds {
       translation 0.022 -0.025 0.033
       rotation 0.858029 -0.363171 -0.363172 1.723331
       name "ps1"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS2 lab7-ds {
+    DEF EPUCK_PS2 ds {
       translation 0 -0.031 0.033
       rotation -0.577352 0.577348 0.577352 -2.094405
       name "ps2"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS3 lab7-ds {
+    DEF EPUCK_PS3 ds {
       translation -0.03 -0.015 0.033
       rotation 0.176824 -0.695961 -0.695968 2.79157
       name "ps3"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS4 lab7-ds {
+    DEF EPUCK_PS4 ds {
       translation -0.03 0.015 0.033
       rotation 0.17854 0.695742 0.695749 2.788236
       name "ps4"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS5 lab7-ds {
+    DEF EPUCK_PS5 ds {
       translation 0 0.031 0.033
       rotation 0.577354 0.577344 0.577352 2.094396
       name "ps5"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS6 lab7-ds {
+    DEF EPUCK_PS6 ds {
       translation 0.022 0.025 0.033
       rotation 0.858533 0.362572 0.362579 1.722748
       name "ps6"
       numberOfRays IS distance_sensor_numberOfRays
     }
-    DEF EPUCK_PS7 lab7-ds {
+    DEF EPUCK_PS7 ds {
       translation 0.03 0.01 0.033
       rotation -0.978028 -0.147411 -0.147416 -1.593022
       name "ps7"

@@ -1,6 +1,6 @@
 #VRML_SIM R2025a utf8
 
-PROTO lab7-ds [
+PROTO ds [
   field SFVec3f    translation  0 0.005 0
   field SFRotation rotation     0 0 1 0
   field SFString   name         "ds"
