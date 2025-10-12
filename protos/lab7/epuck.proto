@@ -581,32 +581,6 @@ Robot {
         ]
       }
     %< } >%
-    DEF EPUCK_RIGHT_COLUMN Pose {
-      translation 0.0254 -0.0193 0.0426
-      children [
-        DEF EPUCK_COLUMN Shape {
-          appearance PBRAppearance {
-            roughness 0.2
-          }
-          geometry Cylinder {
-            height 0.014
-            radius 0.00225
-          }
-        }
-      ]
-    }
-    DEF EPUCK_LEFT_COLUMN Pose {
-      translation 0.0254 0.0193 0.0426
-      children [
-        USE EPUCK_COLUMN
-      ]
-    }
-    DEF EPUCK_REAR_COLUMN Pose {
-      translation -0.032 0 0.0426
-      children [
-        USE EPUCK_COLUMN
-      ]
-    }
     %< if (v1) { >%
       DEF EPUCK_RIGHT_CONNECTOR Pose {
         translation -0.0033 -0.0033 0.0426
