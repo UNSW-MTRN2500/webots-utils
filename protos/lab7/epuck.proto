@@ -1087,7 +1087,7 @@ Robot {
     physics Physics {
       density -1
       %< if (v2) { >%
-        mass 0.13
+        mass 0.15
       %< } else { >%
         mass 0.15
       %< } >%
